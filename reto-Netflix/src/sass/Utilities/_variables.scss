@@ -1,0 +1,17 @@
+// Colours
+// - - - - - - - - - - - - - - - - - - - - - <
+$color-light: #fff;
+$color-dark: rgb(20, 24, 22);
+$color-highlight: rgb(250, 250, 110);
+
+// Fonts
+// - - - - - - - - - - - - - - - - - - - - - <
+$font-default: "Roboto", Arial, Helvetica, sans-serif;
+
+// Breakpoints for media query
+// - - - - - - - - - - - - - - - - - - - - - <
+$bp-max: 80em; // 1280px
+$bp-med: 65.9em; // 1055px
+$bp-small: 50em; // 801px
+$bp-tiny: 40em; // 640px
+$bp-lowest: 29.3em; //470px

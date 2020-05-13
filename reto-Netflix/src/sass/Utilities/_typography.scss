@@ -1,0 +1,60 @@
+// h1
+// - - - - - - - - - - - - - - - - - - - - - <
+.heading-primary {
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  background-color: rgba($color-light, 0.7);
+  color: $color-dark;
+  border-radius: 1rem;
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 100;
+    // Query tiny - - - <
+    @include media($bp-tiny) {
+      font-size: 5rem;
+    }
+    // Query lowest - - - <
+    @include media($bp-lowest) {
+      font-size: 3rem;
+    }
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 300;
+    // Query tiny - - - <
+    @include media($bp-tiny) {
+      font-size: 1.8rem;
+    }
+    // Query lowest - - - <
+    @include media($bp-lowest) {
+      display: none;
+    }
+  }
+}
+
+// h2
+// - - - - - - - - - - - - - - - - - - - - - <
+.section-title {
+  display: inline-block;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+// Top number
+// - - - - - - - - - - - - - - - - - - - - - <
+#top-text::after {
+  content: "5";
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: $color-highlight;
+
+  // Query max - - - <
+  @include media($bp-max) {
+    content: "3";
+  }
+}

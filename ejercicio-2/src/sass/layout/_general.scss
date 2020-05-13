@@ -1,0 +1,57 @@
+.container {
+  width: 50%;
+  min-height: 90vh;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #eeeeee;
+
+  .box {
+    width: 15rem;
+    height: 7rem;
+    margin: 1rem auto;
+    padding: 2.6rem 0;
+    color: #fff;
+
+    &--shadow {
+      background-color: #fff;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .text {
+    width: 15rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    &:first-of-type {
+      margin-bottom: 1rem;
+    }
+
+    &--secondary {
+      font-style: italic;
+    }
+  }
+
+  .btn-theme {
+    display: block;
+    width: 15rem;
+    margin: 1rem auto 0 auto;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.top {
+  height: 18rem;
+  display: flex;
+  justify-content: space-between;
+  // Query max - - - <
+  @include media($bp-max) {
+    height: auto;
+  }
+  // Query med - - - <
+  @include media($bp-med) {
+    height: 18rem;
+  }
+  // Query small - - - <
+  @include media($bp-small) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: 25rem;
+    text-align: right;
+    // Query max - - - <
+    @include media($bp-max) {
+      flex-basis: 31.5rem;
+    }
+    // Query med - - - <
+    @include media($bp-med) {
+      flex-basis: 25rem;
+    }
+    // Query small - - - <
+    @include media($bp-small) {
+      margin: 1.5rem;
+      width: 37rem;
+    }
+
+    &:first-of-type .top__number {
+      left: 3.2rem;
+      // Query max - - - <
+      @include media($bp-max) {
+        left: 1rem;
+      }
+      // Query med - - - <
+      @include media($bp-med) {
+        left: 3.3rem;
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      // Query max - - - <
+      @include media($bp-max) {
+        display: none;
+      }
+    }
+
+    .top__number {
+      position: absolute;
+      top: 0;
+      left: 1.5rem;
+      z-index: -10;
+      font-size: 24rem;
+      line-height: 0.78;
+      color: $color-dark;
+      user-select: none;
+
+      // Two options for numbers stroke - - - <
+      -webkit-text-stroke: 0.2rem $color-light;
+      // text-shadow: -0.1rem 0 $color-light, 0 0.1rem $color-light,
+      //   0.1rem 0 $color-light, 0 -0.1rem $color-light;
+
+      // Query max - - - <
+      @include media($bp-max) {
+        font-size: 34rem;
+        left: -1.2rem;
+      }
+      // Query med - - - <
+      @include media($bp-med) {
+        font-size: 24rem;
+        left: 1.5rem;
+      }
+      // Query small - - - <
+      @include media($bp-small) {
+        font-size: 38rem;
+        left: 0;
+      }
+    }
+
+    img {
+      max-height: 100%;
+      border: 0.2rem solid $color-light;
+
+      &:hover {
+        cursor: pointer;
+        border: 0.2rem solid $color-highlight;
+      }
+    }
+  }
+}

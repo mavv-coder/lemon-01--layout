@@ -1,0 +1,30 @@
+// Extends
+// - - - - - - - - - - - - - - - - - - - - - <
+%flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+%flex-item {
+  flex: 1;
+  margin: 0.3rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: $color-light-2;
+  border-radius: 0.5rem;
+}
+
+%base-item {
+  flex: 2;
+  color: $color-light-1;
+}
+
+// Mixins
+// - - - - - - - - - - - - - - - - - - - - - <
+@mixin darken($color, $amount) {
+  background-color: darken($color, $amount);
+}
+
+@mixin lighten($color, $amount) {
+  background-color: lighten($color, $amount);
+}

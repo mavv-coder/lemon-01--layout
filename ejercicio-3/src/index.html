@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <title>Modulo 01 ~ Ejercicio 3 : Barra de navegación</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <navbar class="navbar">
+          <div class="navbar__box-logo">
+            <a href="#Home">
+              <img
+                src="./img/logo.png"
+                alt="Company logo"
+                class="navbar__box-logo__img"
+              />
+            </a>
+          </div>
+          <a href="#Blog" class="navbar__link">
+            <svg class="navbar__link__icon">
+              <use xlink:href="img/sprite.svg#icon-open-book"></use>
+            </svg>
+            Blog
+          </a>
+          <a href="#Activities" class="navbar__link">
+            <svg class="navbar__link__icon">
+              <use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
+            </svg>
+            Activities
+          </a>
+          <a href="#Contact" class="navbar__link">
+            <svg class="navbar__link__icon">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            Contact
+          </a>
+        </navbar>
+        <div class="hero"></div>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.default-row {
+  display: flex;
+  align-items: center;
+  // Query max - - - <
+  @include media($bp-max) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &:hover > *:not(:hover) {
+    opacity: 0.4;
+  }
+
+  &__item {
+    flex: 1;
+    position: relative;
+    margin: 0 0.2rem;
+    transition: all 0.3s ease;
+    // Query max - - - <
+    @include media($bp-max) {
+      flex: 5 1 250px;
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    &:hover {
+      margin: auto 1.5%;
+      transform: scale(1.2);
+      cursor: pointer;
+      z-index: 1000;
+      // Query max - - - <
+      @include media($bp-max) {
+        transform: scale(1.1);
+      }
+      // Query med - - - <
+      @include media($bp-med) {
+        transform: scale(1.05);
+      }
+    }
+
+    &:nth-child(5):hover,
+    &:nth-child(6):hover {
+      // Query max - - - <
+      @include media($bp-max) {
+        transform: scale(1.05);
+      }
+      // Query med - - - <
+      @include media($bp-med) {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

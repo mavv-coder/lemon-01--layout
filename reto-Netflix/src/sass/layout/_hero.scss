@@ -1,0 +1,20 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba($color-dark, 0.4),
+      rgba($color-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
+
+  &__text {
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}

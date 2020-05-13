@@ -1,0 +1,83 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0 auto;
+  list-style: none;
+  background-color: $color-primary;
+  position: relative;
+  // Query - - - - - - - - - <
+  @include media($bp-720) {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  &__box-logo {
+    padding: 1.1rem 0 0 1.1rem;
+    margin-right: auto;
+
+    @include media($bp-720) {
+      display: inline-block;
+      justify-self: center;
+      margin: 0;
+      padding: 1.5rem 0 1.3rem 0;
+      text-align: center;
+      border-bottom: 0.2rem dotted $color-dark;
+    }
+    &__img {
+      height: 4.5rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 2rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $color-dark;
+    transition: all 0.2s;
+    border-bottom: 0.5rem solid $color-primary;
+    // Query - - - - - - - - - <
+    @include media($bp-720) {
+      line-height: 3rem;
+      border-bottom: none;
+      text-align: center;
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken($color-primary, 15%);
+      border-bottom: 0.5rem solid $color-secondary;
+      color: white;
+      // Query - - - - - - - - - <
+      @include media($bp-720) {
+        border-bottom: none;
+      }
+    }
+
+    &__icon {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.2rem;
+      fill: currentColor;
+      transform: translateY(0.4rem);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80vw;
+    height: 1rem;
+    position: absolute;
+    top: 6.8rem;
+    background-color: $color-secondary;
+    // Query - - - - - - - - - <
+    @include media($bp-720) {
+      width: 100vw;
+      top: 28.9rem;
+    }
+  }
+}

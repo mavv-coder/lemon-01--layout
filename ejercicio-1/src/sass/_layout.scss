@@ -1,0 +1,80 @@
+// Container 1
+// - - - - - - - - - - - - - - - - - - - - - <
+.container-1 {
+  @extend %flex-container;
+
+  .box {
+    @extend %flex-item;
+  }
+
+  .base-color {
+    @extend %base-item;
+    background-color: $color-primary;
+  }
+
+  @each $number, $percentage in $order {
+    .darken-#{$number} {
+      @include darken($color-primary, $percentage);
+    }
+  }
+
+  @each $number, $percentage in $order {
+    .lighten-#{$number} {
+      @include lighten($color-primary, $percentage);
+    }
+  }
+}
+
+// Container 2
+// - - - - - - - - - - - - - - - - - - - - - <
+.container-2 {
+  @extend %flex-container;
+
+  .box {
+    @extend %flex-item;
+  }
+
+  .base-color {
+    @extend %base-item;
+    background-color: $color-secondary;
+  }
+
+  @each $number, $percentage in $order {
+    .darken-#{$number} {
+      @include darken($color-secondary, $percentage);
+    }
+  }
+
+  @each $number, $percentage in $order {
+    .lighten-#{$number} {
+      @include lighten($color-secondary, $percentage);
+    }
+  }
+}
+
+// Container 3
+// - - - - - - - - - - - - - - - - - - - - - <
+.container-3 {
+  @extend %flex-container;
+
+  .box {
+    @extend %flex-item;
+  }
+
+  .base-color {
+    @extend %base-item;
+    background-color: $color-tertiary;
+  }
+
+  @each $number, $percentage in $order {
+    .darken-#{$number} {
+      @include darken($color-tertiary, $percentage);
+    }
+  }
+
+  @each $number, $percentage in $order {
+    .lighten-#{$number} {
+      @include lighten($color-tertiary, $percentage);
+    }
+  }
+}

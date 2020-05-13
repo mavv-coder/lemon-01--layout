@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <title>Modulo 01 ~ Ejercicio 4 : CSS grid card</title>
+  </head>
+  <body>
+    <section class="cards">
+      <article class="card">
+        <div class="card__box">
+          <div class="card__img"></div>
+        </div>
+        <div class="card__author">
+          <img
+            src="./img/picasso-author.jpg"
+            alt="Author photo"
+            class="card__author__img"
+          />
+          <div class="card__author__info">
+            <h2 class="card__author__info__name">Pablo Picasso</h2>
+            <p class="card__author__info__date">25/10/1881</p>
+          </div>
+          <svg class="card__author__icon">
+            <use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+          </svg>
+        </div>
+        <p class="card__description">
+          Nacido en Málaga, su mayor desarrollo artístico se produce en París.
+          Principal figura del movimiento cubista junto a Braque, produjo
+          durante toda su carrera más de 70.000 obras. Es considerado el artista
+          más emblemático del siglo XX y uno de los más grandes de toda la
+          historia del arte.
+        </p>
+        <div class="card__tags">
+          Etiquetas:
+          <a href="#Pintura" class="card__tags__links">Pintura,</a>
+          <a href="#Cubismo" class="card__tags__links">Cubismo,</a>
+          <a href="#Óleo" class="card__tags__links">Óleo</a>
+        </div>
+        <a href="#Mas-obras" class="card__btn">
+          Más obras del artista
+          <svg class="card__btn__icon">
+            <use xlink:href="img/sprite.svg#icon-brush"></use>
+          </svg>
+        </a>
+      </article>
+    </section>
+  </body>
+</html>
